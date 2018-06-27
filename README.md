@@ -19,3 +19,4 @@ I'll also upload test cases to see if my/your code works as intended
 # Challenges
 
 1. parse RLP encoded data
+1.1. write a datastructure to capture RLP data
