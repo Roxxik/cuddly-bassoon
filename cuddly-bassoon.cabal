@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0791079062b6842740ec5b2ed0eea3a16b51ecd4cc3cc1fcc46281921e372754
+-- hash: eda91a13aa431583ff5066399a7b6db97651dc76674851a82bd2a60979592997
 
 name:           cuddly-bassoon
 version:        0.1.0.0
@@ -66,6 +66,7 @@ test-suite unit-tests
   main-is: Spec.hs
   other-modules:
       CryptoSpec
+      HexSpec
       RLPSpec
       Paths_cuddly_bassoon
   hs-source-dirs:
