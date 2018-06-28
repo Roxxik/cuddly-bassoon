@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3ac666aba90f3fec996fc2ef3f3fd96ef823d442f8fbf9c341abe56960047bb6
+-- hash: f9061aade09e8b6413dc6d8df190573b96d11ed5e23186be3efefa30247bbce7
 
 name:           cuddly-bassoon
 version:        0.1.0.0
@@ -26,8 +26,10 @@ source-repository head
 
 library
   exposed-modules:
+      CuddlyBassoon.Convert
+      CuddlyBassoon.RLP
+      CuddlyBassoon.RLP.Parser
       Lib
-      RLP
   other-modules:
       Paths_cuddly_bassoon
   hs-source-dirs:

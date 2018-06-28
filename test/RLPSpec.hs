@@ -1,7 +1,7 @@
 module RLPSpec (main, spec) where
 
 import Test.Hspec
-import RLP
+import CuddlyBassoon.RLP
 
 main :: IO ()
 main = hspec spec
