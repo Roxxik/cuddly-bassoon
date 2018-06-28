@@ -116,3 +116,31 @@ tree = do
 
 getRlp :: [Word8] -> Maybe RLPTree
 getRlp = parse tree
+
+putBe :: (Integral a, Bits a) => a -> [Word8]
+putBe = reverse . putLe
+
+putLe :: (Integral a, Bits a) => a -> [Word8]
+putLe 0 = []
+putLe x
+    | x < 256   = [fromIntegral x]
+    | otherwise = (fromIntegral x .&. 0xFF) : putLe (x `shiftR` 8)
+
+putRlp :: RLPTree -> [Word8]
+putRlp (Leaf xs)
+    | l == 1 && x < 128 = [x]
+    | l < 56            = [128 + fromIntegral l] ++ xs
+    | otherwise         = [183 + fromIntegral lb] ++ b ++ xs
+    where
+        l = length xs
+        x = head xs
+        b = putBe l
+        lb = length b
+putRlp (Node xs)
+    | ls < 56   = [192 + fromIntegral ls] ++ s
+    | otherwise = [247 + fromIntegral lb] ++ b ++ s
+    where
+        s = concatMap putRlp xs
+        ls = length s
+        b = putBe ls
+        lb = length b
