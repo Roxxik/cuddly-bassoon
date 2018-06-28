@@ -21,4 +21,5 @@ I'll also upload test cases to see if my/your code works as intended
 1. parse RLP encoded data
     - write a datastructure to capture RLP data
 2. encode RLP trees
-3. hash byte arrays with keccak256
+3. encode/decode hex values
+4. hash byte arrays with keccak256
