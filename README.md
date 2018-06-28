@@ -23,3 +23,5 @@ I'll also upload test cases to see if my/your code works as intended
 2. encode RLP trees
 3. encode/decode hex values
 4. hash byte arrays with keccak256
+5. hash block0 (0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3)
+    - find block0
