@@ -25,3 +25,12 @@ I'll also upload test cases to see if my/your code works as intended
 4. hash byte arrays with keccak256
 5. hash block0 (0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3)
     - find block0
+
+# Tips and Tricks
+- always have the yellow paper open
+- sometimes it's helpful to look into other ethereum implementations (geth, pyethereum, cppethereum, ...)
+
+# TODO
+- expand challenge descriptions, to make it easier to follow along, maybe i'll make a blog post series out of this
+    - include page references to the yellow paper
+    
